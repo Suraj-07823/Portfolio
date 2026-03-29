@@ -53,10 +53,11 @@
     width: 100%;
   }
   .section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   .section-title {
     margin-bottom: 40px;
+    font-size: 2rem;
   }
   .skills-grid {
     grid-template-columns: 1fr;
@@ -76,6 +77,38 @@
   #cursor-glow {
     display: none;
   }
+
+  /* Certifications Adjustments */
+  .cert-card {
+    padding: 20px 16px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .cert-badge {
+    margin-top: 8px;
+  }
+
+  /* Timeline Adjustments */
+  .timeline {
+    padding-left: 24px;
+  }
+  .timeline::before {
+    left: 9px;
+  }
+  .timeline-marker {
+    width: 20px;
+    height: 20px;
+    left: -24px;
+    top: 6px;
+  }
+  .timeline-marker-inner {
+    width: 8px;
+    height: 8px;
+  }
+  .timeline-content {
+    padding: 20px;
+  }
 }
 
 /* ----- Small Mobile ----- */
@@ -90,5 +123,16 @@
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .timeline-content {
+    padding: 16px;
+  }
+  .cert-card {
+    padding: 16px 12px;
   }
 }
