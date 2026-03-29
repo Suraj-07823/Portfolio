@@ -75,79 +75,254 @@
           <h2 class="section-title">
             <span class="title-decorator">//</span> Projects
           </h2>
-          <div class="projects-grid">
+          <div
+            class="projects-grid"
+            style="grid-template-columns: 1fr; gap: 40px"
+          >
+            <!-- PROJECT 1 -->
             <div class="project-card stagger-item">
-              <div class="project-card-inner">
+              <div class="project-card-inner" style="padding: 40px">
                 <div class="project-header">
-                  <div class="project-icon"><i class="fas fa-rocket"></i></div>
+                  <div
+                    class="project-icon"
+                    style="width: 60px; height: 60px; font-size: 1.8rem"
+                  >
+                    <i class="fab fa-aws"></i>
+                  </div>
                   <div class="project-links">
                     <a
-                      href="#"
+                      href="https://github.com/Suraj-07823"
                       target="_blank"
                       class="project-link-icon"
                       aria-label="GitHub"
-                      ><i class="fab fa-github"></i
-                    ></a>
+                      ><i class="fab fa-github"></i> Repository</a
+                    >
                     <a
                       href="#"
                       target="_blank"
                       class="project-link-icon"
-                      aria-label="Live"
-                      ><i class="fas fa-external-link-alt"></i
-                    ></a>
+                      aria-label="Live Demo"
+                      ><i class="fas fa-external-link-alt"></i> Live
+                      Architecture</a
+                    >
                   </div>
                 </div>
-                <h3 class="project-title">CI/CD Automated Web Deployment</h3>
-                <p class="project-subtitle">The Cake House Bakery</p>
-                <p class="project-description">
-                  Designed a responsive static web application for a local
-                  business. Built CI/CD pipeline using GitHub Actions reducing
-                  deployment time by 50%. Deployed on Vercel with zero manual
-                  intervention.
-                </p>
-                <ul class="project-highlights">
-                  <li>Reduced manual deployment effort by ~50%</li>
-                  <li>Deployment errors reduced by ~30%</li>
-                  <li>Zero-downtime deployments</li>
-                </ul>
-                <div class="project-tech">
-                  <span>GitHub Actions</span><span>Vercel</span
-                  ><span>CI/CD</span><span>HTML/CSS/JS</span>
+                <h3
+                  class="project-title"
+                  style="font-size: 1.5rem; margin-top: 20px"
+                >
+                  Scalable Microservices on AWS (EC2/S3/IAM)
+                </h3>
+
+                <div style="margin-top: 24px">
+                  <h4
+                    style="
+                      color: var(--accent-cyan);
+                      font-family: var(--font-mono);
+                      font-size: 0.9rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    // Problem Statement
+                  </h4>
+                  <p class="project-description">
+                    Local development environments lacked parity with
+                    production, causing "works on my machine" errors. The
+                    application struggled under simulated loads and required
+                    high manual intervention for provisioning and monitoring.
+                  </p>
+                </div>
+
+                <div style="margin-top: 20px">
+                  <h4
+                    style="
+                      color: var(--accent-cyan);
+                      font-family: var(--font-mono);
+                      font-size: 0.9rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    // Architecture Flow
+                  </h4>
+                  <div
+                    style="
+                      background: rgba(0, 240, 255, 0.05);
+                      padding: 16px;
+                      border-radius: 8px;
+                      border: 1px dashed rgba(0, 240, 255, 0.2);
+                      font-family: var(--font-mono);
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      text-align: center;
+                      margin-bottom: 16px;
+                    "
+                  >
+                    Users ➔ NGINX Reverse Proxy ➔ Docker Container (Flask API) ➔
+                    AWS S3 (Storage)
+                  </div>
+                </div>
+
+                <div style="margin-top: 20px">
+                  <h4
+                    style="
+                      color: var(--accent-cyan);
+                      font-family: var(--font-mono);
+                      font-size: 0.9rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    // DevOps Implementation
+                  </h4>
+                  <ul class="project-highlights">
+                    <li>
+                      <strong>CI/CD Pipeline:</strong> Built a GitHub Actions
+                      workflow to run Python unit tests, linting, and
+                      automatically build/push Docker images to Docker Hub on
+                      every commit to main.
+                    </li>
+                    <li>
+                      <strong>Docker Usage:</strong> Standardized the
+                      environment through multi-stage Dockerfiles, reducing
+                      payload image sizes by ~40% and isolating application
+                      dependencies.
+                    </li>
+                    <li>
+                      <strong>Deployment Strategy:</strong> Deployed via SSH
+                      tunneling to a hardened AWS EC2 instance. Bound
+                      minimal-privilege AWS IAM roles for secure external S3
+                      bucket reads without leaking API keys.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="project-tech" style="margin-top: 30px">
+                  <span>AWS EC2</span><span>AWS S3</span><span>AWS IAM</span
+                  ><span>Docker</span><span>GitHub Actions</span
+                  ><span>NGINX</span><span>Linux</span>
                 </div>
               </div>
               <div class="project-card-glow"></div>
             </div>
+
+            <!-- PROJECT 2 -->
             <div class="project-card stagger-item">
-              <div class="project-card-inner">
+              <div class="project-card-inner" style="padding: 40px">
                 <div class="project-header">
-                  <div class="project-icon"><i class="fab fa-docker"></i></div>
+                  <div
+                    class="project-icon"
+                    style="width: 60px; height: 60px; font-size: 1.8rem"
+                  >
+                    <i class="fas fa-infinity"></i>
+                  </div>
                   <div class="project-links">
+                    <a
+                      href="https://github.com/Suraj-07823"
+                      target="_blank"
+                      class="project-link-icon"
+                      aria-label="GitHub"
+                      ><i class="fab fa-github"></i> Repository</a
+                    >
                     <a
                       href="#"
                       target="_blank"
                       class="project-link-icon"
-                      aria-label="GitHub"
-                      ><i class="fab fa-github"></i
-                    ></a>
+                      aria-label="Live Demo"
+                      ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                    >
                   </div>
                 </div>
-                <h3 class="project-title">Dockerized Python Application</h3>
-                <p class="project-subtitle">
-                  Hands-on Containerization Project
-                </p>
-                <p class="project-description">
-                  Containerized a Python/Flask application using Docker. Created
-                  Dockerfiles and managed images/containers. Tested local
-                  deployments for portability and scalability.
-                </p>
-                <ul class="project-highlights">
-                  <li>Improved environment consistency</li>
-                  <li>Portable across systems</li>
-                  <li>Microservices architecture ready</li>
-                </ul>
-                <div class="project-tech">
-                  <span>Docker</span><span>Python</span><span>Flask</span
-                  ><span>Containerization</span>
+                <h3
+                  class="project-title"
+                  style="font-size: 1.5rem; margin-top: 20px"
+                >
+                  Automated Delivery Pipeline for Local Business
+                </h3>
+
+                <div style="margin-top: 24px">
+                  <h4
+                    style="
+                      color: var(--accent-cyan);
+                      font-family: var(--font-mono);
+                      font-size: 0.9rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    // Problem Statement
+                  </h4>
+                  <p class="project-description">
+                    A local bakery required a digital presence but lacked the
+                    technical know-how to deploy updates (like seasonal menus).
+                    Manual FTP uploads were causing downtime and data
+                    mismatches.
+                  </p>
+                </div>
+
+                <div style="margin-top: 20px">
+                  <h4
+                    style="
+                      color: var(--accent-cyan);
+                      font-family: var(--font-mono);
+                      font-size: 0.9rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    // Architecture Flow
+                  </h4>
+                  <div
+                    style="
+                      background: rgba(0, 240, 255, 0.05);
+                      padding: 16px;
+                      border-radius: 8px;
+                      border: 1px dashed rgba(0, 240, 255, 0.2);
+                      font-family: var(--font-mono);
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      text-align: center;
+                      margin-bottom: 16px;
+                    "
+                  >
+                    Git Push ➔ GitHub Actions (Test & Validation) ➔ Vercel Edge
+                    CDN ➔ Global Users
+                  </div>
+                </div>
+
+                <div style="margin-top: 20px">
+                  <h4
+                    style="
+                      color: var(--accent-cyan);
+                      font-family: var(--font-mono);
+                      font-size: 0.9rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    // DevOps Implementation
+                  </h4>
+                  <ul class="project-highlights">
+                    <li>
+                      <strong>CI/CD Pipeline:</strong> Developed robust GitHub
+                      Actions pipelines running static code analysis
+                      (Prettier/HTMLHint) to block broken code from entering
+                      production.
+                    </li>
+                    <li>
+                      <strong>Infrastructure as Code (IaC):</strong> Programmed
+                      <code>vercel.json</code> to enforce strict caching
+                      policies and inject security headers (X-Frame-Options)
+                      unconditionally.
+                    </li>
+                    <li>
+                      <strong>Deployment Strategy:</strong> Established
+                      Continuous Deployment (CD) integrated natively via Vercel
+                      Webhooks, achieving sub-10 second deployments and a 100%
+                      reduction in manual FTP effort.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="project-tech" style="margin-top: 30px">
+                  <span>Continuous Integration</span><span>Vercel</span
+                  ><span>GitHub Actions</span><span>Git</span
+                  ><span>JSON Configuration</span>
                 </div>
               </div>
               <div class="project-card-glow"></div>

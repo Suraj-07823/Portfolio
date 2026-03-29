@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/buttons.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/page-transitions.css" />
@@ -89,7 +90,24 @@
             <span class="cursor-blink">|</span>
           </div>
           <p class="hero-tagline">
-            Building scalable, secure & automated infrastructure
+            I architect cloud infrastructure, automate zero-downtime CI/CD
+            pipelines, and deploy resilient microservices.
+            <span
+              class="hero-metrics"
+              style="
+                display: block;
+                margin-top: 12px;
+                font-size: 0.95rem;
+                color: var(--text-muted);
+              "
+            >
+              <i
+                class="fas fa-chart-line"
+                style="color: var(--accent-green); margin-right: 6px"
+              ></i>
+              Achieving <b>99.9% uptime</b> and reducing deployment times by
+              <b>50%</b> via automation.
+            </span>
           </p>
           <div class="hero-cta">
             <a href="projects.html" class="btn btn-primary">
@@ -97,9 +115,14 @@
               <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
               <span class="btn-glow"></span>
             </a>
-            <a href="contact.html" class="btn btn-outline">
-              <span class="btn-text">Get in Touch</span>
-              <span class="btn-icon"><i class="fas fa-envelope"></i></span>
+            <a
+              href="resume.pdf"
+              target="_blank"
+              class="btn btn-outline"
+              download
+            >
+              <span class="btn-text">Download Resume</span>
+              <span class="btn-icon"><i class="fas fa-download"></i></span>
               <span class="btn-glow"></span>
             </a>
           </div>
@@ -134,12 +157,93 @@
         <div
           class="scroll-indicator"
           style="cursor: pointer"
-          onclick="window.location.href = 'about.html'"
+          onclick="
+            document
+              .getElementById('featured-work')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
         >
           <div class="mouse">
             <div class="mouse-wheel"></div>
           </div>
           <p>Explore More</p>
+        </div>
+      </section>
+
+      <!-- Featured Project Section -->
+      <section id="featured-work" class="section" style="padding-top: 40px">
+        <div class="container">
+          <h2 class="section-title stagger-item">
+            <span class="title-decorator">//</span> Featured Work
+          </h2>
+          <div
+            class="projects-grid stagger-item"
+            style="grid-template-columns: 1fr"
+          >
+            <!-- Single Massive Project Card -->
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-header">
+                  <div class="project-icon"><i class="fab fa-aws"></i></div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/Suraj-07823"
+                      target="_blank"
+                      class="project-link-icon"
+                      aria-label="GitHub"
+                    >
+                      <i class="fab fa-github"></i> Source
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">
+                  Scalable Microservices on AWS (EC2/S3/IAM)
+                </h3>
+                <p class="project-subtitle">Complete DevOps Implementation</p>
+                <p class="project-description">
+                  <strong>Problem:</strong> Local applications lacked
+                  portability, struggled to scale under load, and required
+                  manual provisioning. <br /><br />
+                  Automated the provisioning of hardened EC2 instances with IAM
+                  boundaries. Containerized a multi-tier Flask application using
+                  Docker and deployed it via a resilient CI/CD GitHub Actions
+                  pipeline. Orchestrated a reverse-proxy routing engine (NGINX)
+                  for zero-downtime exposure.
+                </p>
+                <ul class="project-highlights">
+                  <li>
+                    <strong>CI/CD:</strong> GitHub Actions pipeline enforcing
+                    automated testing before image pushes.
+                  </li>
+                  <li>
+                    <strong>Docker:</strong> Multi-stage Dockerfiles optimizing
+                    image size by 40%.
+                  </li>
+                  <li>
+                    <strong>Deployment:</strong> Immutable AWS EC2 deployments
+                    with S3 log backups.
+                  </li>
+                </ul>
+                <div class="project-tech">
+                  <span>AWS EC2/S3</span><span>Docker</span
+                  ><span>GitHub Actions</span><span>NGINX</span
+                  ><span>Python</span>
+                </div>
+                <a
+                  href="projects.html"
+                  class="btn btn-outline"
+                  style="margin-top: 24px; width: fit-content"
+                >
+                  <span class="btn-text">View All DevOps Projects</span>
+                  <span class="btn-icon"
+                    ><i class="fas fa-code-branch"></i
+                  ></span>
+                  <span class="btn-glow"></span>
+                </a>
+              </div>
+              <div class="project-card-glow"></div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
