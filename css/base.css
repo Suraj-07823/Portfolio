@@ -1,0 +1,167 @@
+/* ============================================
+   BASE STYLES
+   ============================================
+   This file contains:
+   - CSS Custom Properties (design tokens)
+   - Global reset
+   - Common utilities
+   - Selection styling
+   - Container layout
+   ============================================ */
+
+/* ----- Design Tokens / CSS Variables ----- */
+:root {
+    /* Background Colors */
+    --bg-primary: #05080f;
+    --bg-secondary: #0a0f1a;
+    --bg-card: rgba(15, 23, 42, 0.6);
+    --bg-card-hover: rgba(20, 30, 55, 0.8);
+    --glass: rgba(15, 23, 42, 0.4);
+    --glass-border: rgba(0, 240, 255, 0.08);
+
+    /* Text Colors */
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* Accent Colors */
+    --accent-cyan: #00f0ff;
+    --accent-blue: #3b82f6;
+    --accent-purple: #8b5cf6;
+    --accent-green: #00ff88;
+    --accent-pink: #f472b6;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #00f0ff, #3b82f6);
+    --gradient-secondary: linear-gradient(135deg, #8b5cf6, #f472b6);
+    --gradient-glow: linear-gradient(135deg, #00f0ff, #00ff88);
+
+    /* Shadows */
+    --shadow-glow: 0 0 30px rgba(0, 240, 255, 0.15);
+    --shadow-glow-hover: 0 0 50px rgba(0, 240, 255, 0.25);
+
+    /* Typography */
+    --font-primary: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+
+    /* Layout */
+    --nav-height: 70px;
+    --container-width: 1200px;
+    --border-radius: 16px;
+
+    /* Transitions */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ----- Global Reset ----- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ----- Selection Highlight ----- */
+::selection {
+    background: rgba(0, 240, 255, 0.3);
+    color: #fff;
+}
+
+/* ----- Base Element Resets ----- */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ----- Container Utility ----- */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ----- Section Base ----- */
+.section {
+    padding: 120px 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* ----- Section Title ----- */
+/* Common styling for all section headings (// About Me, // Skills, etc.) */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* The cyan "//" prefix before section titles */
+.title-decorator {
+    font-family: var(--font-mono);
+    color: var(--accent-cyan);
+    font-size: 0.8em;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+/* Gradient line that extends after the section title */
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--glass-border), transparent);
+    margin-left: 20px;
+}
+
+/* ----- Particle Canvas (background) ----- */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ----- Cursor Glow Effect ----- */
+/* Radial glow that follows the mouse cursor */
+#cursor-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+    will-change: transform;
+}

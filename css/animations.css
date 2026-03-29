@@ -1,0 +1,29 @@
+/* ============================================
+   ANIMATION & REVEAL STYLES
+   ============================================
+   - Scroll reveal (fade-in from bottom)
+   - fadeInUp keyframes (hero elements)
+   - Glitch text effect class
+   ============================================ */
+
+/* Elements start hidden; JS adds .active on scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero staggered entrance animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.glitch-text {
+    position: relative;
+}

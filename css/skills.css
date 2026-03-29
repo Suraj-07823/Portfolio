@@ -1,0 +1,113 @@
+/* ============================================
+   SKILLS & TECH STACK SECTION STYLES
+   ============================================
+   This file contains:
+   - 3-column skill category grid
+   - Skill category card with top-border animation
+   - Category header with icon + title
+   - Skill tags (pill-shaped, monospace)
+   - Tag hover glow effects
+   - Full-width variant for Concepts row
+   ============================================ */
+
+/* ----- Skills Grid ----- */
+/* 3 columns of category cards */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ----- Skill Category Card ----- */
+/* Glass card with animated top border on hover */
+.skill-category {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top border gradient line: scales in from left on hover */
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.skill-category:hover::before {
+    transform: scaleX(1);
+}
+
+/* Hover: darker bg, cyan border, lift, glow */
+.skill-category:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(0, 240, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Full-width variant: spans all 3 columns (for Concepts row) */
+.skill-category.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ----- Category Header ----- */
+/* Icon + title row inside each card */
+.skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.skill-category-header i {
+    font-size: 1.4rem;
+    color: var(--accent-cyan);
+}
+
+.skill-category-header h3 {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ----- Skill Tags ----- */
+/* Flex-wrapped row of pill-shaped tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Individual tag: monospace, bordered pill */
+.skill-tag {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: rgba(0, 240, 255, 0.06);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    color: var(--text-secondary);
+    transition: var(--transition);
+    cursor: default;
+}
+
+/* Hover: brighter bg, cyan text, border + glow */
+/* Note: JS also randomizes the glow color on hover */
+.skill-tag:hover {
+    background: rgba(0, 240, 255, 0.12);
+    color: var(--accent-cyan);
+    border-color: rgba(0, 240, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}

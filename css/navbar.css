@@ -1,0 +1,138 @@
+/* ============================================
+   NAVIGATION BAR STYLES
+   ============================================
+   This file contains:
+   - Fixed navbar with blur backdrop on scroll
+   - Logo styling (<SV />)
+   - Nav link hover/active states with underline
+   - Mobile hamburger toggle button
+   - Mobile slide-in menu
+   ============================================ */
+
+/* ----- Navbar Container ----- */
+/* Fixed at top, transparent initially, frosted glass on scroll */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    z-index: 1000;
+    transition: var(--transition);
+    backdrop-filter: blur(0px);
+}
+
+/* Scrolled state: frosted glass with border */
+#navbar.scrolled {
+    background: rgba(5, 8, 15, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- Inner Layout ----- */
+.nav-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ----- Logo ----- */
+/* Monospace "<SV />" with cyan glow */
+.nav-logo {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    letter-spacing: 1px;
+    transition: var(--transition);
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.nav-logo:hover {
+    text-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
+}
+
+/* ----- Menu Links ----- */
+.nav-menu {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Individual nav link with hover underline */
+.nav-link {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    position: relative;
+    transition: var(--transition);
+    color: var(--text-secondary);
+}
+
+/* Hover & active: cyan text + subtle background */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-cyan);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+/* Animated underline on hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 60%;
+}
+
+/* ----- Mobile Hamburger Toggle ----- */
+/* Hidden on desktop, 3-line icon on mobile */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* Animate into X when active */
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}

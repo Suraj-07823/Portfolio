@@ -1,0 +1,161 @@
+/* ============================================
+   EXPERIENCE / TIMELINE SECTION STYLES
+   ============================================
+   This file contains:
+   - Vertical timeline with gradient line
+   - Circular timeline markers with pulsing glow
+   - Timeline content cards
+   - Internship badge label
+   - Role, company, date info
+   - Bullet point list with ▹ prefix
+   ============================================ */
+
+/* ----- Timeline Container ----- */
+/* Left-padded to make room for the vertical line + markers */
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+/* Vertical gradient line (cyan → purple → transparent) */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-cyan), var(--accent-purple), transparent);
+}
+
+/* ----- Timeline Item ----- */
+.timeline-item {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* ----- Timeline Marker ----- */
+/* Circle positioned over the vertical line */
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 2px solid var(--accent-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Inner glowing dot with pulse animation */
+.timeline-marker-inner {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Pulsing glow keyframes */
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.4); }
+    50% { box-shadow: 0 0 25px rgba(0, 240, 255, 0.7); }
+}
+
+/* ----- Timeline Content Card ----- */
+.timeline-content {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    transition: var(--transition);
+}
+
+/* Hover: slide right + glow */
+.timeline-content:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(0, 240, 255, 0.15);
+    transform: translateX(8px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ----- Internship Badge ----- */
+/* Small "INTERNSHIP" label at top of card */
+.timeline-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ----- Role & Company ----- */
+.timeline-content h3 {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.timeline-content h4 {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+/* Company icon */
+.timeline-content h4 i {
+    margin-right: 6px;
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+}
+
+/* ----- Date ----- */
+.timeline-date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.timeline-date i {
+    margin-right: 6px;
+}
+
+/* ----- Bullet Points ----- */
+.timeline-content ul {
+    padding-left: 0;
+}
+
+.timeline-content li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Cyan arrow prefix instead of bullet dot */
+.timeline-content li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+}

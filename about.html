@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Suraj Vishwakarma</title>
+    <meta name="description" content="About Suraj Vishwakarma — DevOps and Cloud Engineering enthusiast with experience in Linux, AWS, CI/CD, and Docker.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/page-transitions.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div id="cursor-glow"></div>
+    <div class="page-transition-overlay"><div class="transition-panel"></div><div class="transition-panel"></div></div>
+    <div class="transition-loader"><span class="loader-text">&lt;Loading /&gt;</span></div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" data-page>&lt;SV /&gt;</a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="about.html" class="nav-link active" data-page>About</a></li>
+                <li><a href="skills.html" class="nav-link" data-page>Skills</a></li>
+                <li><a href="projects.html" class="nav-link" data-page>Projects</a></li>
+                <li><a href="experience.html" class="nav-link" data-page>Experience</a></li>
+                <li><a href="certifications.html" class="nav-link" data-page>Certifications</a></li>
+                <li><a href="contact.html" class="nav-link" data-page>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <section class="section" style="padding-top: 140px;">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-decorator">//</span> About Me
+                </h2>
+                <div class="about-grid">
+                    <div class="about-text stagger-item">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot yellow"></span>
+                                <span class="terminal-dot green"></span>
+                                <span class="terminal-title">about_suraj.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <p><span class="prompt">$</span> cat about.txt</p>
+                                <p class="terminal-output">
+                                    DevOps and Cloud Engineering enthusiast with hands-on experience in 
+                                    <span class="highlight">Linux administration</span>, 
+                                    <span class="highlight">AWS cloud services</span>, 
+                                    <span class="highlight">CI/CD automation</span>, 
+                                    <span class="highlight">Docker</span>, and infrastructure deployment.
+                                </p>
+                                <p class="terminal-output">
+                                    Skilled in building <span class="highlight">automated pipelines</span>, 
+                                    scripting workflows, and deploying reliable applications with modern DevOps practices. 
+                                    Strong foundation in system security, monitoring, and troubleshooting.
+                                </p>
+                                <p class="terminal-output">
+                                    Interest in <span class="highlight">banking system reliability</span>, monitoring, 
+                                    and secure infrastructure. Seeking <span class="highlight">DevOps/Cloud Internship</span> 
+                                    opportunities to design scalable, secure, and highly available systems.
+                                </p>
+                                <p><span class="prompt">$</span> <span class="cursor-blink">|</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card stagger-item" data-tilt>
+                            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="stat-info">
+                                <h3>Education</h3>
+                                <p>B.Tech — CSE</p>
+                                <span>GHRCEM, Nagpur (2027)</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stagger-item" data-tilt>
+                            <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="stat-info">
+                                <h3>Experience</h3>
+                                <p>2 Internships</p>
+                                <span>DevOps & Cyber Security</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stagger-item" data-tilt>
+                            <div class="stat-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="stat-info">
+                                <h3>Focus</h3>
+                                <p>Cloud & DevOps</p>
+                                <span>AWS · Docker · CI/CD</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stagger-item" data-tilt>
+                            <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="stat-info">
+                                <h3>Certifications</h3>
+                                <p>5 Certificates</p>
+                                <span>AWS & Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">&lt;SV /&gt;</p>
+                <p class="footer-text">Designed & Built by <span class="accent">Suraj Vishwakarma</span></p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Suraj-07823" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/suraj-vishwakarma-a281a6261/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:Vishwakarmasuraj089504@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Suraj Vishwakarma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/matrix.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/page-transitions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

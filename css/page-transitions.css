@@ -1,0 +1,116 @@
+/* ============================================
+   PAGE TRANSITION STYLES
+   ============================================
+   This file contains:
+   - Page transition overlay (wipe effect)
+   - Page content entrance/exit animations
+   - Transition timing and easing
+   ============================================ */
+
+/* ----- Transition Overlay ----- */
+/* Full-screen overlay that wipes across during page change */
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    display: flex;
+}
+
+/* Two halves that slide in from edges */
+.transition-panel {
+    flex: 1;
+    background: var(--bg-secondary);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.transition-panel:nth-child(2) {
+    transform-origin: top;
+    transition-delay: 0.05s;
+}
+
+/* When active: panels expand to cover screen */
+.page-transition-overlay.active .transition-panel {
+    transform: scaleY(1);
+}
+
+/* ----- Loading Indicator ----- */
+.transition-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.transition-loader.active {
+    opacity: 1;
+}
+
+.transition-loader .loader-text {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--accent-cyan);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
+/* ----- Page Content Animations ----- */
+/* Content wrapper that animates in on page load */
+.page-content {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: pageEnter 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.15s;
+}
+
+@keyframes pageEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Exit animation class (added by JS before navigation) */
+.page-content.page-exit {
+    animation: pageExit 0.35s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+@keyframes pageExit {
+    to {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+    }
+}
+
+/* ----- Staggered Content Items ----- */
+/* Children animate in with stagger delay */
+.page-content .stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: staggerIn 0.5s ease forwards;
+}
+
+.page-content .stagger-item:nth-child(1) { animation-delay: 0.2s; }
+.page-content .stagger-item:nth-child(2) { animation-delay: 0.3s; }
+.page-content .stagger-item:nth-child(3) { animation-delay: 0.4s; }
+.page-content .stagger-item:nth-child(4) { animation-delay: 0.5s; }
+.page-content .stagger-item:nth-child(5) { animation-delay: 0.6s; }
+.page-content .stagger-item:nth-child(6) { animation-delay: 0.7s; }
+.page-content .stagger-item:nth-child(7) { animation-delay: 0.8s; }
+
+@keyframes staggerIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

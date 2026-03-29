@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Suraj Vishwakarma</title>
+    <meta name="description" content="Projects by Suraj Vishwakarma — CI/CD automated deployments, Dockerized applications, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/page-transitions.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div id="cursor-glow"></div>
+    <div class="page-transition-overlay"><div class="transition-panel"></div><div class="transition-panel"></div></div>
+    <div class="transition-loader"><span class="loader-text">&lt;Loading /&gt;</span></div>
+
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" data-page>&lt;SV /&gt;</a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="about.html" class="nav-link" data-page>About</a></li>
+                <li><a href="skills.html" class="nav-link" data-page>Skills</a></li>
+                <li><a href="projects.html" class="nav-link active" data-page>Projects</a></li>
+                <li><a href="experience.html" class="nav-link" data-page>Experience</a></li>
+                <li><a href="certifications.html" class="nav-link" data-page>Certifications</a></li>
+                <li><a href="contact.html" class="nav-link" data-page>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <section class="section" style="padding-top: 140px;">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-decorator">//</span> Projects
+                </h2>
+                <div class="projects-grid">
+                    <div class="project-card stagger-item">
+                        <div class="project-card-inner">
+                            <div class="project-header">
+                                <div class="project-icon"><i class="fas fa-rocket"></i></div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" class="project-link-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" class="project-link-icon" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">CI/CD Automated Web Deployment</h3>
+                            <p class="project-subtitle">The Cake House Bakery</p>
+                            <p class="project-description">
+                                Designed a responsive static web application for a local business. Built CI/CD pipeline using 
+                                GitHub Actions reducing deployment time by 50%. Deployed on Vercel with zero manual intervention.
+                            </p>
+                            <ul class="project-highlights">
+                                <li>Reduced manual deployment effort by ~50%</li>
+                                <li>Deployment errors reduced by ~30%</li>
+                                <li>Zero-downtime deployments</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>GitHub Actions</span><span>Vercel</span><span>CI/CD</span><span>HTML/CSS/JS</span>
+                            </div>
+                        </div>
+                        <div class="project-card-glow"></div>
+                    </div>
+                    <div class="project-card stagger-item">
+                        <div class="project-card-inner">
+                            <div class="project-header">
+                                <div class="project-icon"><i class="fab fa-docker"></i></div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" class="project-link-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Dockerized Python Application</h3>
+                            <p class="project-subtitle">Hands-on Containerization Project</p>
+                            <p class="project-description">
+                                Containerized a Python/Flask application using Docker. Created Dockerfiles and managed 
+                                images/containers. Tested local deployments for portability and scalability.
+                            </p>
+                            <ul class="project-highlights">
+                                <li>Improved environment consistency</li>
+                                <li>Portable across systems</li>
+                                <li>Microservices architecture ready</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>Docker</span><span>Python</span><span>Flask</span><span>Containerization</span>
+                            </div>
+                        </div>
+                        <div class="project-card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">&lt;SV /&gt;</p>
+                <p class="footer-text">Designed & Built by <span class="accent">Suraj Vishwakarma</span></p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Suraj-07823" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/suraj-vishwakarma-a281a6261/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:Vishwakarmasuraj089504@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Suraj Vishwakarma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/matrix.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/page-transitions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
