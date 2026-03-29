@@ -1,102 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Suraj Vishwakarma — DevOps & Cloud Engineer</title>
-    <meta name="description" content="Portfolio of Suraj Vishwakarma — DevOps and Cloud Engineering enthusiast skilled in AWS, Docker, CI/CD, Linux, and Python automation.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta
+      name="description"
+      content="Portfolio of Suraj Vishwakarma — DevOps and Cloud Engineering enthusiast skilled in AWS, Docker, CI/CD, Linux, and Python automation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!-- CSS: Modular stylesheets -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/page-transitions.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/page-transitions.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
     <!-- Particle Canvas Background -->
     <canvas id="particle-canvas"></canvas>
     <!-- Cursor Glow -->
     <div id="cursor-glow"></div>
     <!-- Transition Overlay -->
     <div class="page-transition-overlay">
-        <div class="transition-panel"></div>
-        <div class="transition-panel"></div>
+      <div class="transition-panel"></div>
+      <div class="transition-panel"></div>
     </div>
     <div class="transition-loader">
-        <span class="loader-text">&lt;Loading /&gt;</span>
+      <span class="loader-text">&lt;Loading /&gt;</span>
     </div>
 
     <!-- Navigation -->
     <nav id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" data-page>&lt;SV /&gt;</a>
-            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul id="nav-menu" class="nav-menu">
-                <li><a href="about.html" class="nav-link" data-page>About</a></li>
-                <li><a href="skills.html" class="nav-link" data-page>Skills</a></li>
-                <li><a href="projects.html" class="nav-link" data-page>Projects</a></li>
-                <li><a href="experience.html" class="nav-link" data-page>Experience</a></li>
-                <li><a href="certifications.html" class="nav-link" data-page>Certifications</a></li>
-                <li><a href="contact.html" class="nav-link" data-page>Contact</a></li>
-            </ul>
-        </div>
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" data-page>&lt;SV /&gt;</a>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html" class="nav-link" data-page>About</a></li>
+          <li><a href="skills.html" class="nav-link" data-page>Skills</a></li>
+          <li>
+            <a href="projects.html" class="nav-link" data-page>Projects</a>
+          </li>
+          <li>
+            <a href="experience.html" class="nav-link" data-page>Experience</a>
+          </li>
+          <li>
+            <a href="certifications.html" class="nav-link" data-page
+              >Certifications</a
+            >
+          </li>
+          <li><a href="contact.html" class="nav-link" data-page>Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="page-content">
-        <section id="hero" class="hero">
-            <div class="hero-content">
-                <p class="hero-greeting glitch-text" data-text="Hello, I'm">Hello, I'm</p>
-                <h1 class="hero-name">
-                    <span class="name-line">Suraj</span>
-                    <span class="name-line accent">Vishwakarma</span>
-                </h1>
-                <div class="hero-title-wrapper">
-                    <span class="hero-title-prefix">&gt;&nbsp;</span>
-                    <span id="typed-text" class="hero-title"></span>
-                    <span class="cursor-blink">|</span>
-                </div>
-                <p class="hero-tagline">Building scalable, secure & automated infrastructure</p>
-                <div class="hero-cta">
-                    <a href="projects.html" class="btn btn-primary">
-                        <span class="btn-text">View Projects</span>
-                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                        <span class="btn-glow"></span>
-                    </a>
-                    <a href="contact.html" class="btn btn-outline">
-                        <span class="btn-text">Get in Touch</span>
-                        <span class="btn-icon"><i class="fas fa-envelope"></i></span>
-                        <span class="btn-glow"></span>
-                    </a>
-                </div>
-                <div class="hero-socials">
-                    <a href="https://github.com/Suraj-07823" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/suraj-vishwakarma-a281a6261/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:Vishwakarmasuraj089504@gmail.com" class="social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="scroll-indicator" style="cursor:pointer" onclick="window.location.href='about.html'">
-                <div class="mouse">
-                    <div class="mouse-wheel"></div>
-                </div>
-                <p>Explore More</p>
-            </div>
-        </section>
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <p class="hero-greeting glitch-text" data-text="Hello, I'm">
+            Hello, I'm
+          </p>
+          <h1 class="hero-name">
+            <span class="name-line">Suraj</span>
+            <span class="name-line accent">Vishwakarma</span>
+          </h1>
+          <div class="hero-title-wrapper">
+            <span class="hero-title-prefix">&gt;&nbsp;</span>
+            <span id="typed-text" class="hero-title"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+          <p class="hero-tagline">
+            Building scalable, secure & automated infrastructure
+          </p>
+          <div class="hero-cta">
+            <a href="projects.html" class="btn btn-primary">
+              <span class="btn-text">View Projects</span>
+              <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+              <span class="btn-glow"></span>
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              <span class="btn-text">Get in Touch</span>
+              <span class="btn-icon"><i class="fas fa-envelope"></i></span>
+              <span class="btn-glow"></span>
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a
+              href="https://github.com/Suraj-07823"
+              target="_blank"
+              rel="noopener"
+              class="social-link"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/suraj-vishwakarma-a281a6261/"
+              target="_blank"
+              rel="noopener"
+              class="social-link"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="mailto:Vishwakarmasuraj089504@gmail.com"
+              class="social-link"
+              aria-label="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="scroll-indicator"
+          style="cursor: pointer"
+          onclick="window.location.href = 'about.html'"
+        >
+          <div class="mouse">
+            <div class="mouse-wheel"></div>
+          </div>
+          <p>Explore More</p>
+        </div>
+      </section>
     </div>
 
     <!-- JS: Modular scripts -->
@@ -109,5 +154,5 @@
     <script src="js/effects.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

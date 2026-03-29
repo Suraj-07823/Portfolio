@@ -13,144 +13,150 @@
 /* ----- Two-Column Grid ----- */
 /* Terminal on left (wider), stat cards on right */
 .about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 48px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
 /* ----- Terminal Window ----- */
 /* macOS-style terminal with dark background and glow */
 .terminal-window {
-    background: rgba(10, 15, 28, 0.8);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--glass-border);
-    overflow: hidden;
-    box-shadow: var(--shadow-glow);
+  background: rgba(10, 15, 28, 0.8);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
 }
 
 /* ----- Terminal Header ----- */
 /* Top bar with traffic light dots + filename */
 .terminal-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 18px;
-    background: rgba(15, 23, 42, 0.6);
-    border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: rgba(15, 23, 42, 0.6);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 /* Traffic light dots */
 .terminal-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
-.terminal-dot.red { background: #ef4444; }
-.terminal-dot.yellow { background: #eab308; }
-.terminal-dot.green { background: #22c55e; }
+.terminal-dot.red {
+  background: #ef4444;
+}
+.terminal-dot.yellow {
+  background: #eab308;
+}
+.terminal-dot.green {
+  background: #22c55e;
+}
 
 /* Filename label in header */
 .terminal-title {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-left: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: 8px;
 }
 
 /* ----- Terminal Body ----- */
 /* Monospace text area with command lines */
 .terminal-body {
-    padding: 24px;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    line-height: 1.8;
+  padding: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.8;
 }
 
 .terminal-body p {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 /* Green "$" prompt symbol */
 .prompt {
-    color: var(--accent-green);
-    margin-right: 8px;
+  color: var(--accent-green);
+  margin-right: 8px;
 }
 
 /* Output text (indented, secondary color) */
 .terminal-output {
-    color: var(--text-secondary);
-    padding-left: 20px;
+  color: var(--text-secondary);
+  padding-left: 20px;
 }
 
 /* Highlighted keywords within terminal output (cyan) */
 .terminal-output .highlight {
-    color: var(--accent-cyan);
-    font-weight: 500;
+  color: var(--accent-cyan);
+  font-weight: 500;
 }
 
 /* ----- Stat Cards Grid ----- */
 /* 2x2 grid of info cards */
 .about-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 /* Individual stat card */
 .stat-card {
-    background: var(--bg-card);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--border-radius);
-    padding: 24px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    transition: var(--transition);
-    cursor: default;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  transition: var(--transition);
+  cursor: default;
 }
 
 /* Hover: lift + cyan border + glow */
 .stat-card:hover {
-    background: var(--bg-card-hover);
-    border-color: rgba(0, 240, 255, 0.2);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-glow);
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 240, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
 }
 
 /* Icon container in stat card */
 .stat-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: rgba(0, 240, 255, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: var(--accent-cyan);
-    flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 240, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
 }
 
 /* Stat card text */
 .stat-info h3 {
-    font-family: var(--font-primary);
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 2px;
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
 }
 
 .stat-info p {
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .stat-info span {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }

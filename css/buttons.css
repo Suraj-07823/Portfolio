@@ -13,87 +13,91 @@
 /* ----- Base Button ----- */
 /* All buttons share this base: flex layout, padding, rounded, font */
 .btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 32px;
-    border-radius: 12px;
-    font-family: var(--font-primary);
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    transition: var(--transition);
-    border: none;
-    outline: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition);
+  border: none;
+  outline: none;
 }
 
 /* ----- Primary Button ----- */
 /* Cyan-to-blue gradient background, dark text */
 .btn-primary {
-    background: var(--gradient-primary);
-    color: #0a0f1a;
+  background: var(--gradient-primary);
+  color: #0a0f1a;
 }
 
 /* Hover: lift up + intense glow shadow */
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 40px rgba(0, 240, 255, 0.35), 0 0 80px rgba(0, 240, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 40px rgba(0, 240, 255, 0.35),
+    0 0 80px rgba(0, 240, 255, 0.15);
 }
 
 .btn-primary:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* ----- Outline Button ----- */
 /* Transparent background with cyan border */
 .btn-outline {
-    background: transparent;
-    color: var(--accent-cyan);
-    border: 1px solid rgba(0, 240, 255, 0.3);
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.3);
 }
 
 /* Hover: subtle cyan fill + glow */
 .btn-outline:hover {
-    background: rgba(0, 240, 255, 0.08);
-    border-color: var(--accent-cyan);
-    transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+  background: rgba(0, 240, 255, 0.08);
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
 }
 
 /* ----- Glow Ripple Effect ----- */
 /* Expanding circle from center on hover */
 .btn-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
 }
 
 .btn:hover .btn-glow {
-    width: 300px;
-    height: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 /* ----- Icon Slide ----- */
 /* Arrow/icon slides right on hover */
 .btn-icon {
-    display: flex;
-    transition: transform 0.3s;
+  display: flex;
+  transition: transform 0.3s;
 }
 
 .btn:hover .btn-icon {
-    transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 /* ----- Full Width Variant ----- */
 .btn-full {
-    width: 100%;
-    justify-content: center;
+  width: 100%;
+  justify-content: center;
 }

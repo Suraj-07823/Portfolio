@@ -1,99 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experience — Suraj Vishwakarma</title>
-    <meta name="description" content="Professional experience of Suraj Vishwakarma — Cyber Cell and Python Development internships.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/experience.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/page-transitions.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Professional experience of Suraj Vishwakarma — Cyber Cell and Python Development internships."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/page-transitions.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
     <canvas id="particle-canvas"></canvas>
     <div id="cursor-glow"></div>
-    <div class="page-transition-overlay"><div class="transition-panel"></div><div class="transition-panel"></div></div>
-    <div class="transition-loader"><span class="loader-text">&lt;Loading /&gt;</span></div>
+    <div class="page-transition-overlay">
+      <div class="transition-panel"></div>
+      <div class="transition-panel"></div>
+    </div>
+    <div class="transition-loader">
+      <span class="loader-text">&lt;Loading /&gt;</span>
+    </div>
 
     <nav id="navbar" class="scrolled">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" data-page>&lt;SV /&gt;</a>
-            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-            <ul id="nav-menu" class="nav-menu">
-                <li><a href="about.html" class="nav-link" data-page>About</a></li>
-                <li><a href="skills.html" class="nav-link" data-page>Skills</a></li>
-                <li><a href="projects.html" class="nav-link" data-page>Projects</a></li>
-                <li><a href="experience.html" class="nav-link active" data-page>Experience</a></li>
-                <li><a href="certifications.html" class="nav-link" data-page>Certifications</a></li>
-                <li><a href="contact.html" class="nav-link" data-page>Contact</a></li>
-            </ul>
-        </div>
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" data-page>&lt;SV /&gt;</a>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html" class="nav-link" data-page>About</a></li>
+          <li><a href="skills.html" class="nav-link" data-page>Skills</a></li>
+          <li>
+            <a href="projects.html" class="nav-link" data-page>Projects</a>
+          </li>
+          <li>
+            <a href="experience.html" class="nav-link active" data-page
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="certifications.html" class="nav-link" data-page
+              >Certifications</a
+            >
+          </li>
+          <li><a href="contact.html" class="nav-link" data-page>Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <div class="page-content">
-        <section class="section" style="padding-top: 140px;">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="title-decorator">//</span> Experience
-                </h2>
-                <div class="timeline">
-                    <div class="timeline-item stagger-item">
-                        <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-                        <div class="timeline-content">
-                            <div class="timeline-badge">Internship</div>
-                            <h3>Cyber Cell Intern</h3>
-                            <h4><i class="fas fa-building"></i> Nagpur City Police</h4>
-                            <p class="timeline-date"><i class="far fa-calendar-alt"></i> Dec 2025 – Jan 2026</p>
-                            <ul>
-                                <li>Assisted in cybercrime investigation workflows under supervision</li>
-                                <li>Studied and analysed reported cybercrime cases</li>
-                                <li>Conducted basic cyber forensic examination of digital evidence</li>
-                                <li>Assisted in APK analysis for mobile-related investigations</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item stagger-item">
-                        <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-                        <div class="timeline-content">
-                            <div class="timeline-badge">Internship</div>
-                            <h3>Python Development Intern</h3>
-                            <h4><i class="fas fa-building"></i> Shadow Fox</h4>
-                            <p class="timeline-date"><i class="far fa-calendar-alt"></i> Aug 2025 – Sept 2025</p>
-                            <ul>
-                                <li>Analysed structured datasets using Pandas to extract performance metrics</li>
-                                <li>Built data visualization workflows using Matplotlib for analytical insights</li>
-                                <li>Implemented automated data cleaning, improving dataset reliability by ~35%</li>
-                                <li>Documented and published work on GitHub for reproducibility</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <section class="section" style="padding-top: 140px">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="title-decorator">//</span> Experience
+          </h2>
+          <div class="timeline">
+            <div class="timeline-item stagger-item">
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-badge">Internship</div>
+                <h3>Cyber Cell Intern</h3>
+                <h4><i class="fas fa-building"></i> Nagpur City Police</h4>
+                <p class="timeline-date">
+                  <i class="far fa-calendar-alt"></i> Dec 2025 – Jan 2026
+                </p>
+                <ul>
+                  <li>
+                    Assisted in cybercrime investigation workflows under
+                    supervision
+                  </li>
+                  <li>Studied and analysed reported cybercrime cases</li>
+                  <li>
+                    Conducted basic cyber forensic examination of digital
+                    evidence
+                  </li>
+                  <li>
+                    Assisted in APK analysis for mobile-related investigations
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
+            <div class="timeline-item stagger-item">
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-badge">Internship</div>
+                <h3>Python Development Intern</h3>
+                <h4><i class="fas fa-building"></i> Shadow Fox</h4>
+                <p class="timeline-date">
+                  <i class="far fa-calendar-alt"></i> Aug 2025 – Sept 2025
+                </p>
+                <ul>
+                  <li>
+                    Analysed structured datasets using Pandas to extract
+                    performance metrics
+                  </li>
+                  <li>
+                    Built data visualization workflows using Matplotlib for
+                    analytical insights
+                  </li>
+                  <li>
+                    Implemented automated data cleaning, improving dataset
+                    reliability by ~35%
+                  </li>
+                  <li>
+                    Documented and published work on GitHub for reproducibility
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-logo">&lt;SV /&gt;</p>
-                <p class="footer-text">Designed & Built by <span class="accent">Suraj Vishwakarma</span></p>
-                <div class="footer-socials">
-                    <a href="https://github.com/Suraj-07823" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/suraj-vishwakarma-a281a6261/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:Vishwakarmasuraj089504@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-                <p class="footer-copy">&copy; 2026 Suraj Vishwakarma. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-logo">&lt;SV /&gt;</p>
+          <p class="footer-text">
+            Designed & Built by <span class="accent">Suraj Vishwakarma</span>
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://github.com/Suraj-07823"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/suraj-vishwakarma-a281a6261/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="mailto:Vishwakarmasuraj089504@gmail.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+          <p class="footer-copy">
+            &copy; 2026 Suraj Vishwakarma. All rights reserved.
+          </p>
         </div>
+      </div>
     </footer>
 
     <script src="js/particles.js"></script>
@@ -105,5 +181,5 @@
     <script src="js/effects.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

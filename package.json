@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-devops-ci",
+  "version": "1.0.0",
+  "description": "CI scripts for Portfolio",
+  "scripts": {
+    "lint:html": "htmlhint \"*.html\"",
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "npm run lint:html"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "prettier": "^3.2.5"
+  }
+}
